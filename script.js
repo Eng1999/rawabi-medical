@@ -1,3 +1,62 @@
+(function () {
+  var STORAGE_KEY = "rawabi-lang";
+  var dict = window.RAWABI_I18N || {};
+
+  function applyLang(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "en" ? "ltr" : "rtl";
+    document.body.classList.toggle("lang-en", lang === "en");
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      if (!el.hasAttribute("data-ar-text")) {
+        el.setAttribute("data-ar-text", el.textContent);
+      }
+      var key = el.getAttribute("data-i18n");
+      el.textContent = lang === "en" && dict[key] ? dict[key] : el.getAttribute("data-ar-text");
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      if (!el.hasAttribute("data-ar-html")) {
+        el.setAttribute("data-ar-html", el.innerHTML);
+      }
+      var key = el.getAttribute("data-i18n-html");
+      el.innerHTML = lang === "en" && dict[key] ? dict[key] : el.getAttribute("data-ar-html");
+    });
+
+    document.querySelectorAll("[data-i18n-attr]").forEach(function (el) {
+      el.getAttribute("data-i18n-attr").split("|").forEach(function (pair) {
+        var parts = pair.split(":");
+        var attr = parts[0];
+        var key = parts[1];
+        var cacheAttr = "data-ar-" + attr;
+        if (!el.hasAttribute(cacheAttr)) {
+          el.setAttribute(cacheAttr, el.getAttribute(attr) || "");
+        }
+        el.setAttribute(attr, lang === "en" && dict[key] ? dict[key] : el.getAttribute(cacheAttr));
+      });
+    });
+
+    document.querySelectorAll(".lang-toggle span").forEach(function (span) {
+      span.textContent = lang === "en" ? "العربية" : "English";
+    });
+
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var saved = "ar";
+    try { saved = localStorage.getItem(STORAGE_KEY) || "ar"; } catch (e) {}
+    applyLang(saved);
+
+    document.querySelectorAll(".lang-toggle").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var current = document.documentElement.lang === "en" ? "en" : "ar";
+        applyLang(current === "en" ? "ar" : "en");
+      });
+    });
+  });
+})();
+
 document.addEventListener("DOMContentLoaded", function () {
   var header = document.querySelector(".site-header");
   var toggleBtn = document.querySelector(".nav-toggle");
@@ -102,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
         message;
 
       var mailto =
-        "mailto:info@rawabimedical.sa" +
+        "mailto:info@rwabimed.com" +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
 

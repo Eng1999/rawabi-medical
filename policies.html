@@ -2,9 +2,10 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var l=localStorage.getItem('rawabi-lang')||'ar';document.documentElement.lang=l;document.documentElement.dir=l==='en'?'ltr':'rtl';}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سياسة الخصوصية | روابي الطبية</title>
-<meta name="description" content="سياسة الخصوصية وشروط الاستخدام الخاصة بموقع روابي الطبية.">
+<title data-i18n="page.title">سياسة الخصوصية | روابي الطبية</title>
+<meta name="description" data-i18n-attr="content:meta.desc" content="سياسة الخصوصية وشروط الاستخدام الخاصة بموقع روابي الطبية.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -16,23 +17,47 @@
   <div class="header-inner container">
     <a href="index.html" class="brand">
       <span class="brand-mark">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a1 1 0 0 1 1 1v3h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3v3a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1v-3H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1h2Z"/><path d="M4 14v4a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-4"/></svg>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="logoGrad" x1="10" y1="90" x2="90" y2="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3DBB5E"/><stop offset="1" stop-color="#1E8FD1"/></linearGradient></defs><path d="M50 4 L90 27 V73 L50 96 L10 73 V27 Z" stroke="url(#logoGrad)" stroke-width="6" stroke-linejoin="round"/><path d="M22 50 H35 L42 38 L50 62 L57 44 L63 50 H78" stroke="url(#logoGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="5" fill="url(#logoGrad)"/></svg>
       </span>
-      <span>روابي الطبية<small>Rawabi Medical</small></span>
+      <span><span data-i18n="brand.name">روابي الطبية</span><small data-i18n="brand.tagline">Rawabi Medical</small></span>
     </a>
 
     <nav class="nav-links">
-      <a href="index.html">الرئيسية</a>
-      <a href="about.html">من نحن</a>
-      <a href="services.html">خدماتنا</a>
-      <a href="advantages.html">مميزاتنا</a>
-      <a href="contact.html">تواصل معنا</a>
+      <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+      <div class="nav-item">
+        <a href="about.html">
+          <span data-i18n="nav.about">من نحن</span>
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="about.html#who-we-are" data-i18n="nav.about.who">من نحن</a>
+          <a href="about.html#our-purpose" data-i18n="nav.about.purpose">غايتنا</a>
+          <a href="about.html#vision-mission" data-i18n="nav.about.vision">الرؤية والرسالة</a>
+          <a href="about.html#rn-group" data-i18n="nav.about.group">جزء من المجموعة</a>
+        </div>
+      </div>
+      <a href="services.html" data-i18n="nav.services">خدماتنا</a>
+      <div class="nav-item">
+        <a href="advantages.html">
+          <span data-i18n="nav.advantages">مميزاتنا</span>
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="advantages.html#our-partners" data-i18n="nav.partners">شركاؤنا</a>
+          <a href="advantages.html#our-clients" data-i18n="nav.clients">عملاؤنا</a>
+        </div>
+      </div>
+      <a href="contact.html" data-i18n="nav.contact">تواصل معنا</a>
     </nav>
 
     <div class="header-actions">
-      <a href="policies.html" class="btn btn-ghost">سياسة الخصوصية</a>
-      <a href="contact.html" class="btn btn-primary">اطلب عرض سعر</a>
-      <button class="nav-toggle" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+      <a href="policies.html" class="btn btn-ghost" data-i18n="nav.privacy">سياسة الخصوصية</a>
+      <button class="lang-toggle" type="button" aria-label="Switch language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10Z"/></svg>
+        <span>English</span>
+      </button>
+      <a href="contact.html" class="btn btn-primary" data-i18n="nav.quote">اطلب عرض سعر</a>
+      <button class="nav-toggle" data-i18n-attr="aria-label:nav.openMenu" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -40,13 +65,17 @@
 <div class="mobile-nav">
   <div class="mobile-nav-panel">
     <button class="mobile-nav-close">✕</button>
-    <a href="index.html">الرئيسية</a>
-    <a href="about.html">من نحن</a>
-    <a href="services.html">خدماتنا</a>
-    <a href="advantages.html">مميزاتنا</a>
-    <a href="contact.html">تواصل معنا</a>
-    <a href="policies.html">سياسة الخصوصية</a>
-    <a href="contact.html" class="btn btn-primary">اطلب عرض سعر</a>
+    <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+    <a href="about.html" data-i18n="nav.about">من نحن</a>
+    <a href="services.html" data-i18n="nav.services">خدماتنا</a>
+    <a href="advantages.html" data-i18n="nav.advantages">مميزاتنا</a>
+    <a href="contact.html" data-i18n="nav.contact">تواصل معنا</a>
+    <a href="policies.html" data-i18n="nav.privacy">سياسة الخصوصية</a>
+    <button class="lang-toggle" type="button" aria-label="Switch language">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10Z"/></svg>
+      <span>English</span>
+    </button>
+    <a href="contact.html" class="btn btn-primary" data-i18n="nav.quote">اطلب عرض سعر</a>
   </div>
 </div>
 
@@ -54,41 +83,41 @@
 
   <section class="page-hero">
     <div class="container">
-      <span class="section-tag">سياسة الخصوصية</span>
-      <h1 class="section-title">سياسة الخصوصية وشروط الاستخدام</h1>
-      <div class="breadcrumb"><a href="index.html">الرئيسية</a> / سياسة الخصوصية</div>
+      <span class="section-tag" data-i18n="nav.privacy">سياسة الخصوصية</span>
+      <h1 class="section-title" data-i18n="policy.title">سياسة الخصوصية وشروط الاستخدام</h1>
+      <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">الرئيسية</a> / <span data-i18n="nav.privacy">سياسة الخصوصية</span></div>
     </div>
   </section>
 
   <section>
     <div class="container">
       <div class="policy-content reveal">
-        <p>تلتزم روابي الطبية بحماية خصوصية زوار موقعها الإلكتروني والحفاظ على سرية بياناتهم الشخصية وفقًا لأفضل الممارسات المعمول بها.</p>
+        <p data-i18n="policy.intro">تلتزم روابي الطبية بحماية خصوصية زوار موقعها الإلكتروني والحفاظ على سرية بياناتهم الشخصية وفقًا لأفضل الممارسات المعمول بها.</p>
 
-        <h2>جمع المعلومات</h2>
-        <p>قد نقوم بجمع بيانات مثل الاسم والبريد الإلكتروني ورقم الهاتف عند تعبئة نموذج التواصل، وذلك فقط بغرض الرد على استفساراتكم وطلباتكم.</p>
+        <h2 data-i18n="policy.h1">جمع المعلومات</h2>
+        <p data-i18n="policy.p1">قد نقوم بجمع بيانات مثل الاسم والبريد الإلكتروني ورقم الهاتف عند تعبئة نموذج التواصل، وذلك فقط بغرض الرد على استفساراتكم وطلباتكم.</p>
 
-        <h2>استخدام المعلومات</h2>
+        <h2 data-i18n="policy.h2">استخدام المعلومات</h2>
         <ul>
-          <li>الرد على الاستفسارات وطلبات عروض الأسعار.</li>
-          <li>تحسين جودة الخدمات المقدمة عبر الموقع.</li>
-          <li>التواصل بخصوص الطلبات والعقود القائمة.</li>
+          <li data-i18n="policy.li1">الرد على الاستفسارات وطلبات عروض الأسعار.</li>
+          <li data-i18n="policy.li2">تحسين جودة الخدمات المقدمة عبر الموقع.</li>
+          <li data-i18n="policy.li3">التواصل بخصوص الطلبات والعقود القائمة.</li>
         </ul>
 
-        <h2>حماية البيانات</h2>
-        <p>نتخذ الإجراءات التقنية والتنظيمية المناسبة لحماية بياناتكم من الوصول أو الاستخدام أو الإفصاح غير المصرح به.</p>
+        <h2 data-i18n="policy.h3">حماية البيانات</h2>
+        <p data-i18n="policy.p3">نتخذ الإجراءات التقنية والتنظيمية المناسبة لحماية بياناتكم من الوصول أو الاستخدام أو الإفصاح غير المصرح به.</p>
 
-        <h2>مشاركة البيانات مع أطراف ثالثة</h2>
-        <p>لا تقوم روابي الطبية ببيع أو مشاركة بياناتكم الشخصية مع أي طرف ثالث لأغراض تسويقية دون موافقتكم الصريحة.</p>
+        <h2 data-i18n="policy.h4">مشاركة البيانات مع أطراف ثالثة</h2>
+        <p data-i18n="policy.p4">لا تقوم روابي الطبية ببيع أو مشاركة بياناتكم الشخصية مع أي طرف ثالث لأغراض تسويقية دون موافقتكم الصريحة.</p>
 
-        <h2>ملفات تعريف الارتباط (Cookies)</h2>
-        <p>قد يستخدم الموقع ملفات تعريف ارتباط لتحسين تجربة التصفح، ويمكنكم إدارة تفضيلاتها من إعدادات المتصفح.</p>
+        <h2 data-i18n="policy.h5">ملفات تعريف الارتباط (Cookies)</h2>
+        <p data-i18n="policy.p5">قد يستخدم الموقع ملفات تعريف ارتباط لتحسين تجربة التصفح، ويمكنكم إدارة تفضيلاتها من إعدادات المتصفح.</p>
 
-        <h2>التعديلات على السياسة</h2>
-        <p>تحتفظ روابي الطبية بحق تحديث هذه السياسة في أي وقت، وسيتم نشر أي تغييرات على هذه الصفحة.</p>
+        <h2 data-i18n="policy.h6">التعديلات على السياسة</h2>
+        <p data-i18n="policy.p6">تحتفظ روابي الطبية بحق تحديث هذه السياسة في أي وقت، وسيتم نشر أي تغييرات على هذه الصفحة.</p>
 
-        <h2>التواصل معنا</h2>
-        <p>لأي استفسار بخصوص سياسة الخصوصية، يرجى التواصل معنا عبر البريد الإلكتروني: <a href="mailto:info@rawabimedical.sa">info@rawabimedical.sa</a></p>
+        <h2 data-i18n="footer.contact">التواصل معنا</h2>
+        <p data-i18n-html="policy.contact.html">لأي استفسار بخصوص سياسة الخصوصية، يرجى التواصل معنا عبر البريد الإلكتروني: <a href="mailto:info@rwabimed.com">info@rwabimed.com</a></p>
       </div>
     </div>
   </section>
@@ -100,50 +129,109 @@
     <div class="footer-brand">
       <a href="index.html" class="brand">
         <span class="brand-mark">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a1 1 0 0 1 1 1v3h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3v3a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1v-3H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1h2Z"/><path d="M4 14v4a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-4"/></svg>
+          <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="logoGrad" x1="10" y1="90" x2="90" y2="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3DBB5E"/><stop offset="1" stop-color="#1E8FD1"/></linearGradient></defs><path d="M50 4 L90 27 V73 L50 96 L10 73 V27 Z" stroke="url(#logoGrad)" stroke-width="6" stroke-linejoin="round"/><path d="M22 50 H35 L42 38 L50 62 L57 44 L63 50 H78" stroke="url(#logoGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="5" fill="url(#logoGrad)"/></svg>
         </span>
-        <span>روابي الطبية</span>
+        <span data-i18n="brand.name">روابي الطبية</span>
       </a>
-      <p>شريككم الموثوق في توريد وتوطين التقنية والمستلزمات الطبية للمنشآت الصحية في المملكة العربية السعودية.</p>
+      <p data-i18n="footer.desc">شركة سعودية متخصصة في توريد وتوطين المنتجات الطبية والصيدلانية عالية الجودة، إحدى شركات مجموعة روابي الطبيعة القابضة (RN Holding).</p>
       <div class="footer-social">
-        <a href="#" aria-label="تويتر"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.9l-5.4-6.6L4.5 22H1.3l8-9.2L1 2h7l4.9 6z"/></svg></a>
-        <a href="#" aria-label="لينكدإن"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5A2 2 0 1 1 3 5a2 2 0 0 1 3.94 0ZM3.3 8.75h3.7V21H3.3V8.75Zm6.7 0h3.55v1.68h.05c.5-.9 1.7-1.85 3.5-1.85 3.75 0 4.45 2.3 4.45 5.3V21h-3.7v-5.4c0-1.3 0-3-1.85-3s-2.1 1.4-2.1 2.9V21H10V8.75Z"/></svg></a>
-        <a href="#" aria-label="انستغرام"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.42.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53c.64-.25 1.37-.42 2.43-.47C8.94.01 9.3 0 12 0Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.17 1.17 0 1 1 0-2.34 1.17 1.17 0 0 1 0 2.34Z"/></svg></a>
+        <a href="#" data-i18n-attr="aria-label:aria.twitter" aria-label="تويتر"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.9l-5.4-6.6L4.5 22H1.3l8-9.2L1 2h7l4.9 6z"/></svg></a>
+        <a href="#" data-i18n-attr="aria-label:aria.linkedin" aria-label="لينكدإن"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5A2 2 0 1 1 3 5a2 2 0 0 1 3.94 0ZM3.3 8.75h3.7V21H3.3V8.75Zm6.7 0h3.55v1.68h.05c.5-.9 1.7-1.85 3.5-1.85 3.75 0 4.45 2.3 4.45 5.3V21h-3.7v-5.4c0-1.3 0-3-1.85-3s-2.1 1.4-2.1 2.9V21H10V8.75Z"/></svg></a>
+        <a href="#" data-i18n-attr="aria-label:aria.instagram" aria-label="انستغرام"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.42.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53c.64-.25 1.37-.42 2.43-.47C8.94.01 9.3 0 12 0Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.17 1.17 0 1 1 0-2.34 1.17 1.17 0 0 1 0 2.34Z"/></svg></a>
       </div>
     </div>
     <div class="footer-col">
-      <h5>روابط سريعة</h5>
+      <h5 data-i18n="footer.quicklinks">روابط سريعة</h5>
       <ul>
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="about.html">من نحن</a></li>
-        <li><a href="services.html">خدماتنا</a></li>
-        <li><a href="advantages.html">مميزاتنا</a></li>
+        <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+        <li><a href="services.html" data-i18n="nav.services">خدماتنا</a></li>
+        <li><a href="advantages.html" data-i18n="nav.advantages">مميزاتنا</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>خدماتنا</h5>
+      <h5 data-i18n="footer.services">خدماتنا</h5>
       <ul>
-        <li><a href="services.html">توريد الأجهزة الطبية</a></li>
-        <li><a href="services.html">الصيانة والدعم الفني</a></li>
-        <li><a href="services.html">تجهيز المنشآت الصحية</a></li>
-        <li><a href="contact.html">طلب عرض سعر</a></li>
+        <li><a href="services.html" data-i18n="services.distribution">التوزيع والخدمات اللوجستية</a></li>
+        <li><a href="services.html" data-i18n="services.regulatory">الشؤون التنظيمية والامتثال</a></li>
+        <li><a href="services.html" data-i18n="services.market">الوصول إلى السوق والمناقصات</a></li>
+        <li><a href="services.html" data-i18n="services.support">الدعم العلمي والتجاري</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>تواصل معنا</h5>
+      <h5 data-i18n="footer.contact">تواصل معنا</h5>
       <ul>
-        <li><a href="tel:+966XXXXXXXXX">+966 XX XXX XXXX</a></li>
-        <li><a href="mailto:info@rawabimedical.sa">info@rawabimedical.sa</a></li>
-        <li><a href="contact.html">الرياض، المملكة العربية السعودية</a></li>
+        <li><a href="tel:+966112633962">+966 11 263 3962</a></li>
+        <li><a href="mailto:info@rwabimed.com">info@rwabimed.com</a></li>
+        <li><a href="contact.html" data-i18n="footer.address">طريق مكة المكرمة الفرعي، العليا، الرياض 9380</a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>© 2026 روابي الطبية. جميع الحقوق محفوظة.</span>
-    <span><a href="policies.html">سياسة الخصوصية</a></span>
+    <span data-i18n="footer.copyright">© 2026 روابي الطبية (روابي الطبيعة الطبية) — س.ت 1010712618. جميع الحقوق محفوظة.</span>
+    <span><a href="https://rwabimed.com" target="_blank" rel="noopener">rwabimed.com</a> · <a href="policies.html" data-i18n="nav.privacy">سياسة الخصوصية</a></span>
   </div>
 </footer>
 
+<script>window.RAWABI_I18N = {
+  "nav.home": "Home",
+  "nav.about": "Who We Are",
+  "nav.about.who": "Who We Are",
+  "nav.about.purpose": "Our Purpose",
+  "nav.about.vision": "Vision & Mission",
+  "nav.about.group": "Part of the Group",
+  "nav.services": "Services",
+  "nav.advantages": "Why Us",
+  "nav.partners": "Our Partners",
+  "nav.clients": "Our Clients",
+  "nav.contact": "Contact Us",
+  "nav.privacy": "Privacy Policy",
+  "nav.quote": "Request a Quote",
+  "nav.openMenu": "Open menu",
+  "brand.name": "Rawabi Medical",
+  "brand.tagline": "روابي الطبية",
+  "footer.desc": "A Saudi company specialized in supplying and distributing high-quality medical and pharmaceutical products, part of RN Holding Group (Rawabi Al-Tabiea).",
+  "footer.quicklinks": "Quick Links",
+  "footer.services": "Our Services",
+  "footer.contact": "Get in Touch",
+  "footer.address": "Makkah Al-Mukarramah Sub Road, Al Olaya, Riyadh 9380",
+  "footer.copyright": "© 2026 Rawabi Medical (Rawabi Al-Tabiea Medical) — C.R. 1010712618. All rights reserved.",
+  "aria.twitter": "Twitter",
+  "aria.linkedin": "LinkedIn",
+  "aria.instagram": "Instagram",
+  "services.distribution": "Distribution & Logistics",
+  "services.regulatory": "Regulatory Affairs & Compliance",
+  "services.market": "Market Access & Tendering",
+  "services.support": "Scientific & Commercial Support",
+  "home.cta.btn1": "Contact Us Now",
+  "stats.national": "Distribution coverage for government health facilities",
+  "stats.globaln": "Global",
+  "stats.global": "Established, trusted partnerships",
+  "stats.riyadh": "Dedicated warehouse and cold-chain fleet",
+  "stats.riyadhn": "Riyadh",
+  "home.hero.stat1": "SAR annual revenue (2025)",
+  "home.hero.stat2n": "National",
+  "about.cta.title": "Because better access leads to better health outcomes",
+  "page.title": "Privacy Policy | Rawabi Medical",
+  "meta.desc": "Privacy policy and terms of use for the Rawabi Medical website.",
+  "policy.title": "Privacy Policy & Terms of Use",
+  "policy.intro": "Rawabi Medical is committed to protecting the privacy of its website visitors and safeguarding the confidentiality of their personal data in line with best practices.",
+  "policy.h1": "Information We Collect",
+  "policy.p1": "We may collect data such as name, email, and phone number when you fill out the contact form, solely to respond to your inquiries and requests.",
+  "policy.h2": "How We Use Information",
+  "policy.li1": "Responding to inquiries and quote requests.",
+  "policy.li2": "Improving the quality of services provided through the website.",
+  "policy.li3": "Communicating about existing requests and contracts.",
+  "policy.h3": "Data Protection",
+  "policy.p3": "We take appropriate technical and organizational measures to protect your data from unauthorized access, use, or disclosure.",
+  "policy.h4": "Sharing Data with Third Parties",
+  "policy.p4": "Rawabi Medical does not sell or share your personal data with any third party for marketing purposes without your explicit consent.",
+  "policy.h5": "Cookies",
+  "policy.p5": "The website may use cookies to improve the browsing experience; you can manage your preferences from your browser settings.",
+  "policy.h6": "Changes to This Policy",
+  "policy.p6": "Rawabi Medical reserves the right to update this policy at any time, and any changes will be posted on this page.",
+  "policy.contact.html": "For any questions about this privacy policy, please contact us via email: <a href=\"mailto:info@rwabimed.com\">info@rwabimed.com</a>"
+};</script>
 <script src="script.js"></script>
 </body>
 </html>

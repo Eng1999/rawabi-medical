@@ -2,9 +2,10 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var l=localStorage.getItem('rawabi-lang')||'ar';document.documentElement.lang=l;document.documentElement.dir=l==='en'?'ltr':'rtl';}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>خدماتنا | روابي الطبية</title>
-<meta name="description" content="خدمات روابي الطبية: توريد الأجهزة والمستلزمات الطبية، الصيانة والدعم الفني، تجهيز المنشآت الصحية، الاستشارات، التدريب، والتوزيع اللوجستي.">
+<title data-i18n="page.title">خدماتنا | روابي الطبية</title>
+<meta name="description" data-i18n-attr="content:meta.desc" content="خدمات روابي الطبية: التوزيع واللوجستيات، الشؤون التنظيمية والامتثال، الوصول إلى السوق ومناقصات نوبكو، التيقظ الدوائي، والمكاتب العلمية.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -16,23 +17,47 @@
   <div class="header-inner container">
     <a href="index.html" class="brand">
       <span class="brand-mark">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a1 1 0 0 1 1 1v3h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3v3a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1v-3H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1h2Z"/><path d="M4 14v4a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-4"/></svg>
+        <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="logoGrad" x1="10" y1="90" x2="90" y2="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3DBB5E"/><stop offset="1" stop-color="#1E8FD1"/></linearGradient></defs><path d="M50 4 L90 27 V73 L50 96 L10 73 V27 Z" stroke="url(#logoGrad)" stroke-width="6" stroke-linejoin="round"/><path d="M22 50 H35 L42 38 L50 62 L57 44 L63 50 H78" stroke="url(#logoGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="5" fill="url(#logoGrad)"/></svg>
       </span>
-      <span>روابي الطبية<small>Rawabi Medical</small></span>
+      <span><span data-i18n="brand.name">روابي الطبية</span><small data-i18n="brand.tagline">Rawabi Medical</small></span>
     </a>
 
     <nav class="nav-links">
-      <a href="index.html">الرئيسية</a>
-      <a href="about.html">من نحن</a>
-      <a href="services.html" class="active">خدماتنا</a>
-      <a href="advantages.html">مميزاتنا</a>
-      <a href="contact.html">تواصل معنا</a>
+      <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+      <div class="nav-item">
+        <a href="about.html">
+          <span data-i18n="nav.about">من نحن</span>
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="about.html#who-we-are" data-i18n="nav.about.who">من نحن</a>
+          <a href="about.html#our-purpose" data-i18n="nav.about.purpose">غايتنا</a>
+          <a href="about.html#vision-mission" data-i18n="nav.about.vision">الرؤية والرسالة</a>
+          <a href="about.html#rn-group" data-i18n="nav.about.group">جزء من المجموعة</a>
+        </div>
+      </div>
+      <a href="services.html" class="active" data-i18n="nav.services">خدماتنا</a>
+      <div class="nav-item">
+        <a href="advantages.html">
+          <span data-i18n="nav.advantages">مميزاتنا</span>
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="advantages.html#our-partners" data-i18n="nav.partners">شركاؤنا</a>
+          <a href="advantages.html#our-clients" data-i18n="nav.clients">عملاؤنا</a>
+        </div>
+      </div>
+      <a href="contact.html" data-i18n="nav.contact">تواصل معنا</a>
     </nav>
 
     <div class="header-actions">
-      <a href="policies.html" class="btn btn-ghost">سياسة الخصوصية</a>
-      <a href="contact.html" class="btn btn-primary">اطلب عرض سعر</a>
-      <button class="nav-toggle" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+      <a href="policies.html" class="btn btn-ghost" data-i18n="nav.privacy">سياسة الخصوصية</a>
+      <button class="lang-toggle" type="button" aria-label="Switch language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10Z"/></svg>
+        <span>English</span>
+      </button>
+      <a href="contact.html" class="btn btn-primary" data-i18n="nav.quote">اطلب عرض سعر</a>
+      <button class="nav-toggle" data-i18n-attr="aria-label:nav.openMenu" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -40,13 +65,17 @@
 <div class="mobile-nav">
   <div class="mobile-nav-panel">
     <button class="mobile-nav-close">✕</button>
-    <a href="index.html">الرئيسية</a>
-    <a href="about.html">من نحن</a>
-    <a href="services.html">خدماتنا</a>
-    <a href="advantages.html">مميزاتنا</a>
-    <a href="contact.html">تواصل معنا</a>
-    <a href="policies.html">سياسة الخصوصية</a>
-    <a href="contact.html" class="btn btn-primary">اطلب عرض سعر</a>
+    <a href="index.html" data-i18n="nav.home">الرئيسية</a>
+    <a href="about.html" data-i18n="nav.about">من نحن</a>
+    <a href="services.html" data-i18n="nav.services">خدماتنا</a>
+    <a href="advantages.html" data-i18n="nav.advantages">مميزاتنا</a>
+    <a href="contact.html" data-i18n="nav.contact">تواصل معنا</a>
+    <a href="policies.html" data-i18n="nav.privacy">سياسة الخصوصية</a>
+    <button class="lang-toggle" type="button" aria-label="Switch language">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10 15 15 0 0 1-4-10 15 15 0 0 1 4-10Z"/></svg>
+      <span>English</span>
+    </button>
+    <a href="contact.html" class="btn btn-primary" data-i18n="nav.quote">اطلب عرض سعر</a>
   </div>
 </div>
 
@@ -54,10 +83,10 @@
 
   <section class="page-hero">
     <div class="container">
-      <span class="section-tag">خدماتنا</span>
-      <h1 class="section-title">حلول متكاملة من التوريد إلى التشغيل</h1>
-      <p class="section-desc" style="margin:0 auto;">نرافق منشآتكم الصحية في كل مرحلة: من اختيار الأجهزة المناسبة، إلى التركيب والتشغيل، وصولًا إلى الصيانة الدورية والدعم الفني المستمر.</p>
-      <div class="breadcrumb"><a href="index.html">الرئيسية</a> / خدماتنا</div>
+      <span class="section-tag" data-i18n="nav.services">خدماتنا</span>
+      <h1 class="section-title" data-i18n="services.hero.title">خدمات متكاملة لتشغيل المنتجات الصحية في السوق السعودي</h1>
+      <p class="section-desc" style="margin:0 auto;" data-i18n="services.hero.desc">حلول متكاملة لدخول السوق السعودي، الامتثال التنظيمي، والوصول إلى الجهات الصحية.</p>
+      <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">الرئيسية</a> / <span data-i18n="nav.services">خدماتنا</span></div>
     </div>
   </section>
 
@@ -68,43 +97,52 @@
           <div class="card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
           </div>
-          <h3>توريد الأجهزة والمستلزمات الطبية</h3>
-          <p>توفير أجهزة تشخيصية وعلاجية ومستلزمات استهلاكية من مصنّعين عالميين معتمدين، تناسب احتياجات المستشفيات والعيادات ومراكز الرعاية.</p>
+          <h3 data-i18n="services.distribution">التوزيع والخدمات اللوجستية</h3>
+          <p data-i18n="services.card1.desc">توزيع يغطي جميع مناطق المملكة، عبر مستودعات مخصصة وأسطول مركبات يضمن استمرارية توفر المنتجات.</p>
         </div>
         <div class="card reveal">
           <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.7 6.3-1.1 1.1a2 2 0 0 0 0 2.8l.2.2a2 2 0 0 0 2.8 0l1.1-1.1a4 4 0 1 1-3 3l-6.9 6.9a2 2 0 1 1-2.8-2.8l6.9-6.9a4 4 0 0 1 3-6.2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
           </div>
-          <h3>الصيانة والدعم الفني</h3>
-          <p>عقود صيانة وقائية ودورية، إضافة إلى دعم فني طارئ لضمان جاهزية الأجهزة الطبية على مدار الساعة طوال أيام الأسبوع.</p>
-        </div>
-        <div class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
-          </div>
-          <h3>تجهيز المنشآت الصحية</h3>
-          <p>دراسة احتياجات المنشأة وتصميم وتنفيذ خطط تجهيز شاملة للمستشفيات والمراكز الطبية بأحدث الأنظمة.</p>
+          <h3 data-i18n="services.regulatory">الشؤون التنظيمية والامتثال</h3>
+          <p data-i18n="services.card2.desc">فريق داخلي يجهّز ويتابع متطلبات تسجيل المنتجات، إدارة الوثائق، وملفات eCTD مع الجهات ذات العلاقة.</p>
         </div>
         <div class="card reveal">
           <div class="card-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <h3>الاستشارات والتخطيط</h3>
-          <p>استشارات متخصصة لاختيار الأجهزة المناسبة، ووضع خطط تشغيلية وصيانة تراعي معايير السلامة والكفاءة التشغيلية.</p>
+          <h3 data-i18n="services.market">الوصول إلى السوق والمناقصات</h3>
+          <p data-i18n="services.card3.desc">دعم متكامل لدخول المنتجات السوق السعودي، بما يشمل مناقصات نوبكو والجهات الصحية الحكومية والخاصة.</p>
         </div>
         <div class="card reveal">
           <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-11.8V5l-8-3-8 3v5.2C4 17.5 12 22 12 22Z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
-          <h3>التدريب التقني</h3>
-          <p>برامج تدريبية للكوادر الطبية والفنية على تشغيل الأجهزة والاستخدام الآمن والصيانة الأولية.</p>
+          <h3 data-i18n="services.pv.title">التيقظ الدوائي</h3>
+          <p data-i18n="services.card4.desc">متابعة سلامة المنتجات والالتزامات التنظيمية بعد التسويق، عبر جمع تقارير السلامة والتنسيق مع الشركاء.</p>
         </div>
         <div class="card reveal">
           <div class="card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
           </div>
-          <h3>التوزيع واللوجستيات</h3>
-          <p>شبكة توريد وتوزيع تغطي مختلف مناطق المملكة، مع إدارة مخزون دقيقة تضمن التسليم في الوقت المناسب.</p>
+          <h3 data-i18n="services.office.title">إنشاء وإدارة المكاتب العلمية</h3>
+          <p data-i18n="services.card5.desc">إنشاء وإدارة المكاتب العلمية وفق الأنظمة المحلية، وبناء تواصل علمي فعّال مع مقدمي الرعاية الصحية.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-i18n="services.reps.title">الترويج عبر مندوبي الدعاية الطبية</h3>
+          <p data-i18n="services.card6.desc">مندوبو دعاية طبية مؤهلون يعزّزون الوعي بالمنتجات لدى مقدمي الرعاية الصحية ويدعمون استخدامها الأمثل.</p>
+        </div>
+      </div>
+      <div style="max-width:400px;margin:28px auto 0;">
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-11M12 6V3M20 21v-5M20 12V3"/><path d="M1 14h6M9 8h6M17 16h6"/></svg>
+          </div>
+          <h3 data-i18n="services.design.title">قسم التصميم</h3>
+          <p data-i18n="services.card7.desc">استوديو داخلي يطوّر المواد البصرية والعلمية والتسويقية بما يتوافق مع هوية الشركاء.</p>
         </div>
       </div>
     </div>
@@ -114,34 +152,12 @@
     <div class="container">
       <div class="split">
         <div class="reveal">
-          <span class="section-tag">آلية العمل</span>
-          <h2 class="section-title">من الطلب إلى التسليم والتشغيل</h2>
-          <div class="value-list">
-            <div class="value-item">
-              <span class="dot"><strong>1</strong></span>
-              <div><h4>دراسة الاحتياج</h4><p>نستمع لاحتياجات منشأتكم ونقترح الحلول المناسبة.</p></div>
-            </div>
-            <div class="value-item">
-              <span class="dot"><strong>2</strong></span>
-              <div><h4>عرض السعر والتوريد</h4><p>نعدّ عرض سعر تفصيليًا وننسّق عملية التوريد والشحن.</p></div>
-            </div>
-            <div class="value-item">
-              <span class="dot"><strong>3</strong></span>
-              <div><h4>التركيب والتشغيل</h4><p>يقوم فريقنا الفني بالتركيب والمعايرة والتأكد من التشغيل الآمن.</p></div>
-            </div>
-            <div class="value-item">
-              <span class="dot"><strong>4</strong></span>
-              <div><h4>الصيانة المستمرة</h4><p>نقدّم متابعة دورية وخدمة صيانة طارئة عند الحاجة.</p></div>
-            </div>
-          </div>
+          <span class="section-tag" data-i18n="services.offer.tag">ماذا نقدّم</span>
+          <h2 class="section-title" data-i18n="services.offer.title">منصة متكاملة لدخول السوق السعودي</h2>
+          <p class="section-desc" data-i18n="services.offer.desc1">منصة متكاملة من التسجيل والدراسات السوقية إلى التوزيع والمناقصات والترويج الطبي.</p>
+          <p class="section-desc" style="margin-top:14px;" data-i18n="services.offer.desc2">لا نكتفي بالتوريد — نبني حضورًا مستدامًا لشركائنا داخل السوق السعودي.</p>
         </div>
-        <div class="split-media reveal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="16" rx="2"/>
-            <path d="M8 2v4M16 2v4M3 10h18"/>
-            <path d="m9 15 2 2 4-4"/>
-          </svg>
-        </div>
+        <div class="split-media reveal" style="background-image:url('assets/img/team-network.jpg');background-size:cover;background-position:center;"></div>
       </div>
     </div>
   </section>
@@ -150,11 +166,11 @@
     <div class="container">
       <div class="cta-band reveal">
         <div>
-          <h2>لديكم مشروع أو مناقصة توريد طبي؟</h2>
-          <p>راسلونا بتفاصيل المشروع وسيتواصل معكم فريقنا المختص لتقديم أفضل الحلول.</p>
+          <h2 data-i18n="services.cta.title">لديكم منتج طبي أو صيدلاني تبحثون عن دخول السوق السعودي به؟</h2>
+          <p data-i18n="services.cta.desc">راسلونا بتفاصيل المنتج أو المشروع وسيتواصل معكم فريقنا المختص لتقديم أفضل الحلول.</p>
         </div>
         <div class="cta-actions">
-          <a href="contact.html" class="btn" style="background:#fff;color:var(--color-primary-dark);">تواصل معنا الآن</a>
+          <a href="contact.html" class="btn" style="background:#fff;color:var(--color-primary-dark);" data-i18n="home.cta.btn1">تواصل معنا الآن</a>
         </div>
       </div>
     </div>
@@ -167,50 +183,111 @@
     <div class="footer-brand">
       <a href="index.html" class="brand">
         <span class="brand-mark">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a1 1 0 0 1 1 1v3h3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3v3a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1v-3H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1h2Z"/><path d="M4 14v4a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-4"/></svg>
+          <svg viewBox="0 0 100 100" fill="none"><defs><linearGradient id="logoGrad" x1="10" y1="90" x2="90" y2="10" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3DBB5E"/><stop offset="1" stop-color="#1E8FD1"/></linearGradient></defs><path d="M50 4 L90 27 V73 L50 96 L10 73 V27 Z" stroke="url(#logoGrad)" stroke-width="6" stroke-linejoin="round"/><path d="M22 50 H35 L42 38 L50 62 L57 44 L63 50 H78" stroke="url(#logoGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="86" cy="50" r="5" fill="url(#logoGrad)"/></svg>
         </span>
-        <span>روابي الطبية</span>
+        <span data-i18n="brand.name">روابي الطبية</span>
       </a>
-      <p>شريككم الموثوق في توريد وتوطين التقنية والمستلزمات الطبية للمنشآت الصحية في المملكة العربية السعودية.</p>
+      <p data-i18n="footer.desc">شركة سعودية متخصصة في توريد وتوطين المنتجات الطبية والصيدلانية عالية الجودة، إحدى شركات مجموعة روابي الطبيعة القابضة (RN Holding).</p>
       <div class="footer-social">
-        <a href="#" aria-label="تويتر"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.9l-5.4-6.6L4.5 22H1.3l8-9.2L1 2h7l4.9 6z"/></svg></a>
-        <a href="#" aria-label="لينكدإن"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5A2 2 0 1 1 3 5a2 2 0 0 1 3.94 0ZM3.3 8.75h3.7V21H3.3V8.75Zm6.7 0h3.55v1.68h.05c.5-.9 1.7-1.85 3.5-1.85 3.75 0 4.45 2.3 4.45 5.3V21h-3.7v-5.4c0-1.3 0-3-1.85-3s-2.1 1.4-2.1 2.9V21H10V8.75Z"/></svg></a>
-        <a href="#" aria-label="انستغرام"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.42.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53c.64-.25 1.37-.42 2.43-.47C8.94.01 9.3 0 12 0Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.17 1.17 0 1 1 0-2.34 1.17 1.17 0 0 1 0 2.34Z"/></svg></a>
+        <a href="#" data-i18n-attr="aria-label:aria.twitter" aria-label="تويتر"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.9l-5.4-6.6L4.5 22H1.3l8-9.2L1 2h7l4.9 6z"/></svg></a>
+        <a href="#" data-i18n-attr="aria-label:aria.linkedin" aria-label="لينكدإن"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5A2 2 0 1 1 3 5a2 2 0 0 1 3.94 0ZM3.3 8.75h3.7V21H3.3V8.75Zm6.7 0h3.55v1.68h.05c.5-.9 1.7-1.85 3.5-1.85 3.75 0 4.45 2.3 4.45 5.3V21h-3.7v-5.4c0-1.3 0-3-1.85-3s-2.1 1.4-2.1 2.9V21H10V8.75Z"/></svg></a>
+        <a href="#" data-i18n-attr="aria-label:aria.instagram" aria-label="انستغرام"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.42.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53c.64-.25 1.37-.42 2.43-.47C8.94.01 9.3 0 12 0Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-8.4a1.17 1.17 0 1 1 0-2.34 1.17 1.17 0 0 1 0 2.34Z"/></svg></a>
       </div>
     </div>
     <div class="footer-col">
-      <h5>روابط سريعة</h5>
+      <h5 data-i18n="footer.quicklinks">روابط سريعة</h5>
       <ul>
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="about.html">من نحن</a></li>
-        <li><a href="services.html">خدماتنا</a></li>
-        <li><a href="advantages.html">مميزاتنا</a></li>
+        <li><a href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="about.html" data-i18n="nav.about">من نحن</a></li>
+        <li><a href="services.html" data-i18n="nav.services">خدماتنا</a></li>
+        <li><a href="advantages.html" data-i18n="nav.advantages">مميزاتنا</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>خدماتنا</h5>
+      <h5 data-i18n="footer.services">خدماتنا</h5>
       <ul>
-        <li><a href="services.html">توريد الأجهزة الطبية</a></li>
-        <li><a href="services.html">الصيانة والدعم الفني</a></li>
-        <li><a href="services.html">تجهيز المنشآت الصحية</a></li>
-        <li><a href="contact.html">طلب عرض سعر</a></li>
+        <li><a href="services.html" data-i18n="services.distribution">التوزيع والخدمات اللوجستية</a></li>
+        <li><a href="services.html" data-i18n="services.regulatory">الشؤون التنظيمية والامتثال</a></li>
+        <li><a href="services.html" data-i18n="services.market">الوصول إلى السوق والمناقصات</a></li>
+        <li><a href="services.html" data-i18n="services.support">الدعم العلمي والتجاري</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h5>تواصل معنا</h5>
+      <h5 data-i18n="footer.contact">تواصل معنا</h5>
       <ul>
-        <li><a href="tel:+966XXXXXXXXX">+966 XX XXX XXXX</a></li>
-        <li><a href="mailto:info@rawabimedical.sa">info@rawabimedical.sa</a></li>
-        <li><a href="contact.html">الرياض، المملكة العربية السعودية</a></li>
+        <li><a href="tel:+966112633962">+966 11 263 3962</a></li>
+        <li><a href="mailto:info@rwabimed.com">info@rwabimed.com</a></li>
+        <li><a href="contact.html" data-i18n="footer.address">طريق مكة المكرمة الفرعي، العليا، الرياض 9380</a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>© 2026 روابي الطبية. جميع الحقوق محفوظة.</span>
-    <span><a href="policies.html">سياسة الخصوصية</a></span>
+    <span data-i18n="footer.copyright">© 2026 روابي الطبية (روابي الطبيعة الطبية) — س.ت 1010712618. جميع الحقوق محفوظة.</span>
+    <span><a href="https://rwabimed.com" target="_blank" rel="noopener">rwabimed.com</a> · <a href="policies.html" data-i18n="nav.privacy">سياسة الخصوصية</a></span>
   </div>
 </footer>
 
+<script>window.RAWABI_I18N = {
+  "nav.home": "Home",
+  "nav.about": "Who We Are",
+  "nav.about.who": "Who We Are",
+  "nav.about.purpose": "Our Purpose",
+  "nav.about.vision": "Vision & Mission",
+  "nav.about.group": "Part of the Group",
+  "nav.services": "Services",
+  "nav.advantages": "Why Us",
+  "nav.partners": "Our Partners",
+  "nav.clients": "Our Clients",
+  "nav.contact": "Contact Us",
+  "nav.privacy": "Privacy Policy",
+  "nav.quote": "Request a Quote",
+  "nav.openMenu": "Open menu",
+  "brand.name": "Rawabi Medical",
+  "brand.tagline": "روابي الطبية",
+  "footer.desc": "A Saudi company specialized in supplying and distributing high-quality medical and pharmaceutical products, part of RN Holding Group (Rawabi Al-Tabiea).",
+  "footer.quicklinks": "Quick Links",
+  "footer.services": "Our Services",
+  "footer.contact": "Get in Touch",
+  "footer.address": "Makkah Al-Mukarramah Sub Road, Al Olaya, Riyadh 9380",
+  "footer.copyright": "© 2026 Rawabi Medical (Rawabi Al-Tabiea Medical) — C.R. 1010712618. All rights reserved.",
+  "aria.twitter": "Twitter",
+  "aria.linkedin": "LinkedIn",
+  "aria.instagram": "Instagram",
+  "services.distribution": "Distribution & Logistics",
+  "services.regulatory": "Regulatory Affairs & Compliance",
+  "services.market": "Market Access & Tendering",
+  "services.support": "Scientific & Commercial Support",
+  "home.cta.btn1": "Contact Us Now",
+  "stats.national": "Distribution coverage for government health facilities",
+  "stats.globaln": "Global",
+  "stats.global": "Established, trusted partnerships",
+  "stats.riyadh": "Dedicated warehouse and cold-chain fleet",
+  "stats.riyadhn": "Riyadh",
+  "home.hero.stat1": "SAR annual revenue (2025)",
+  "home.hero.stat2n": "National",
+  "about.cta.title": "Because better access leads to better health outcomes",
+  "page.title": "Our Services | Rawabi Medical",
+  "meta.desc": "Rawabi Medical services: distribution and logistics, regulatory affairs and compliance, market access and NUPCO tenders, pharmacovigilance, and scientific offices.",
+  "services.hero.title": "Integrated services to operate healthcare products in the Saudi market",
+  "services.hero.desc": "End-to-end solutions for Saudi market entry, regulatory compliance, and access to healthcare entities.",
+  "services.card1.desc": "Distribution covering every region of the Kingdom, through dedicated warehouses and a vehicle fleet that ensures continuous product availability.",
+  "services.card2.desc": "An in-house team preparing and following up on product registration requirements, document management, and eCTD dossiers with relevant authorities.",
+  "services.card3.desc": "Integrated support for bringing products into the Saudi market, including NUPCO tenders and government and private healthcare entities.",
+  "services.pv.title": "Pharmacovigilance",
+  "services.card4.desc": "Monitoring product safety and post-marketing regulatory obligations, through safety report collection and coordination with partners.",
+  "services.office.title": "Scientific Office Setup & Management",
+  "services.card5.desc": "Establishing and managing scientific offices per local regulations, and building effective scientific communication with healthcare providers.",
+  "services.reps.title": "Promotion via Medical Representatives",
+  "services.card6.desc": "Qualified medical representatives raising product awareness among healthcare providers and supporting their optimal use.",
+  "services.design.title": "Design Department",
+  "services.card7.desc": "An in-house studio developing visual, scientific, and marketing materials aligned with partners' branding.",
+  "services.offer.tag": "What We Offer",
+  "services.offer.title": "An integrated platform for Saudi market entry",
+  "services.offer.desc1": "An integrated platform from registration and market studies to distribution, tendering, and medical promotion.",
+  "services.offer.desc2": "We don't just supply — we build a sustainable presence for our partners in the Saudi market.",
+  "services.cta.title": "Do you have a medical or pharmaceutical product looking to enter the Saudi market?",
+  "services.cta.desc": "Send us your product or project details and our specialized team will get in touch with the best solutions."
+};</script>
 <script src="script.js"></script>
 </body>
 </html>
