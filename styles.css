@@ -32,6 +32,18 @@
   font-weight: 100 900;
   font-display: swap;
 }
+@font-face {
+  font-family: "Cinzel";
+  src: url("assets/fonts/Cinzel-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("assets/fonts/Cinzel-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
 
 :root {
   --color-primary: #0573ad;
@@ -207,8 +219,10 @@ section { padding: 96px 0; }
 .brand-mark svg { width: 100%; height: 100%; }
 .brand small {
   display: block;
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-family: "Cinzel", serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   color: var(--color-text-muted);
 }
 
