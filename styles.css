@@ -545,7 +545,7 @@ section { padding: 96px 0; }
 
 .card-icon {
   width: 58px; height: 58px;
-  border-radius: 14px;
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
   background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   display: flex; align-items: center; justify-content: center;
   color: #fff;
