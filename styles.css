@@ -69,6 +69,23 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --transition: 0.25s var(--ease-out);
+  --corner-cut: 20px;
+  --corner-cut-sm: 14px;
+}
+
+.card, .flow-step, .icon-card, .photo-card {
+  clip-path: polygon(
+    var(--corner-cut) 0, 100% 0,
+    100% calc(100% - var(--corner-cut)), calc(100% - var(--corner-cut)) 100%,
+    0 100%, 0 var(--corner-cut)
+  );
+}
+.icon-card {
+  clip-path: polygon(
+    var(--corner-cut-sm) 0, 100% 0,
+    100% calc(100% - var(--corner-cut-sm)), calc(100% - var(--corner-cut-sm)) 100%,
+    0 100%, 0 var(--corner-cut-sm)
+  );
 }
 
 @media (prefers-reduced-motion: reduce) {
