@@ -661,14 +661,14 @@ section { padding: 96px 0; }
   margin-top: 48px;
 }
 .partner-logo-strip.large .logo-pill {
-  background: #fff;
-  padding: 28px 44px;
-  box-shadow: var(--shadow-md);
+  background: transparent;
+  border: none;
+  padding: 8px;
 }
-.partner-logo-strip.large .logo-pill img { max-height: 64px; }
+.partner-logo-strip.large .logo-pill:hover { transform: translateY(-3px); }
+.partner-logo-strip.large .logo-pill img { max-height: 120px; }
 @media (max-width: 640px) {
-  .partner-logo-strip.large .logo-pill { padding: 20px 28px; }
-  .partner-logo-strip.large .logo-pill img { max-height: 46px; }
+  .partner-logo-strip.large .logo-pill img { max-height: 80px; }
 }
 
 @media (max-width: 860px) {
