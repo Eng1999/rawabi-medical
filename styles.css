@@ -333,6 +333,8 @@ section { padding: 96px 0; }
   overflow: hidden;
 }
 .hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 60px;
@@ -448,6 +450,37 @@ section { padding: 96px 0; }
 @keyframes float-drift {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-16px) rotate(12deg); }
+}
+
+/* ---------- Hero ambient floating pills ---------- */
+.hero-pills {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-pill {
+  position: absolute;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(61,187,94,0.32) 50%, rgba(30,143,209,0.32) 50%);
+  box-shadow: 0 10px 24px rgba(23,50,79,0.08);
+  animation: pill-float var(--pill-dur, 10s) ease-in-out infinite;
+  animation-delay: var(--pill-delay, 0s);
+}
+.hero-pill.rev { background: linear-gradient(90deg, rgba(30,143,209,0.28) 50%, rgba(61,187,94,0.28) 50%); }
+@keyframes pill-float {
+  0%, 100% { transform: translateY(0) rotate(var(--pill-tilt, 0deg)); }
+  50% { transform: translateY(-18px) rotate(calc(var(--pill-tilt, 0deg) + 6deg)); }
+}
+.hero-pill.p1 { width: 86px; height: 34px; top: 8%;  inset-inline-start: 4%;  --pill-tilt: -22deg; --pill-dur: 11s; }
+.hero-pill.p2 { width: 60px; height: 24px; top: 62%; inset-inline-start: 2%;  --pill-tilt: 18deg;  --pill-dur: 9s;  --pill-delay: -2.5s; }
+.hero-pill.p3 { width: 70px; height: 28px; top: 20%; inset-inline-end: 30%;  --pill-tilt: 34deg;  --pill-dur: 12.5s; --pill-delay: -5s; }
+.hero-pill.p4 { width: 50px; height: 20px; top: 82%; inset-inline-start: 30%; --pill-tilt: -14deg; --pill-dur: 8s;  --pill-delay: -1s; }
+.hero-pill.p5 { width: 96px; height: 38px; bottom: 6%; inset-inline-end: 4%;  --pill-tilt: -30deg; --pill-dur: 13s; --pill-delay: -6.5s; }
+.hero-pill.p6 { width: 40px; height: 16px; top: 40%;  inset-inline-start: 16%; --pill-tilt: 8deg;   --pill-dur: 7.5s; --pill-delay: -3.5s; }
+@media (max-width: 860px) {
+  .hero-pill.p3, .hero-pill.p5 { display: none; }
 }
 
 .hero-visual .icon-cluster {
