@@ -615,6 +615,42 @@ section { padding: 96px 0; }
   box-shadow: var(--shadow-lg);
 }
 
+/* ---------- Hexagon media (platform value section) ---------- */
+.hex-media-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+.hex-media-glow {
+  position: absolute;
+  width: min(94%, 430px);
+  aspect-ratio: 1;
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+  background: conic-gradient(from 200deg, var(--color-primary), var(--color-accent), var(--color-primary-light), var(--color-primary));
+  opacity: 0.85;
+  animation: ring-spin 16s linear infinite;
+}
+.hex-media {
+  position: relative;
+  width: min(82%, 350px);
+  aspect-ratio: 1;
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.5s var(--ease-spring);
+}
+.hex-media-wrap:hover .hex-media { transform: scale(1.04) rotate(3deg); }
+.value-item .dot.dot-hex {
+  width: 44px; height: 44px;
+  border-radius: 0;
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: #fff;
+}
+
 /* ---------- Photo cards (image-first featured cards) ---------- */
 .photo-card {
   position: relative;
