@@ -643,6 +643,12 @@ section { padding: 96px 0; }
   transition: transform 0.5s var(--ease-spring);
 }
 .hex-media-wrap:hover .hex-media { transform: scale(1.04) rotate(3deg); }
+.hex-media-logo {
+  background-color: #fff;
+  background-size: 56%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .value-item .dot.dot-hex {
   width: 44px; height: 44px;
   border-radius: 0;
