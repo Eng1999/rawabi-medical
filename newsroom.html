@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <script>(function(){try{var l=localStorage.getItem('rawabi-lang')||'ar';document.documentElement.lang=l;document.documentElement.dir=l==='en'?'ltr':'rtl';}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="page.title">التيقظ الدوائي | روابي الطبية</title>
-<meta name="description" data-i18n-attr="content:meta.desc" content="أبلغوا وحدة التيقظ الدوائي في روابي الطبية عن أي آثار جانبية مرتبطة بمنتجاتنا الطبية والصيدلانية.">
+<title data-i18n="page.title">الأخبار | روابي الطبية</title>
+<meta name="description" data-i18n-attr="content:meta.desc" content="آخر أخبار وتحديثات روابي الطبية: شراكات، مبادرات، وتطورات الشركة.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -47,8 +47,8 @@
           <a href="advantages.html#our-clients" data-i18n="nav.clients">عملاؤنا</a>
         </div>
       </div>
-      <a href="drug-safety.html" class="active" data-i18n="nav.drugsafety">التيقظ الدوائي</a>
-      <a href="newsroom.html" data-i18n="nav.newsroom">الأخبار</a>
+      <a href="drug-safety.html" data-i18n="nav.drugsafety">التيقظ الدوائي</a>
+      <a href="newsroom.html" class="active" data-i18n="nav.newsroom">الأخبار</a>
       <a href="contact.html" data-i18n="nav.contact">تواصل معنا</a>
     </nav>
 
@@ -94,60 +94,32 @@
     <span class="hero-pill p6 rev"></span>
   </div>
     <div class="container">
-      <span class="section-tag" data-i18n="nav.drugsafety">التيقظ الدوائي</span>
-      <h1 class="section-title" data-i18n="ds.hero.title">مرحبًا بكم في صفحة الإبلاغ عن الآثار الجانبية الخاصة بروابي الطبية</h1>
-      <p class="section-desc" style="margin:0 auto;" data-i18n="ds.hero.desc">متابعة سلامة منتجاتنا الطبية والصيدلانية مسؤولية نضعها في صميم عملنا.</p>
-      <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">الرئيسية</a> / <span data-i18n="nav.drugsafety">التيقظ الدوائي</span></div>
+      <span class="section-tag" data-i18n="nav.newsroom">الأخبار</span>
+      <h1 class="section-title" data-i18n="newsroom.hero.title">آخر أخبار روابي الطبية</h1>
+      <p class="section-desc" style="margin:0 auto;" data-i18n="newsroom.hero.desc">شراكات، مبادرات، وتطورات الشركة أولًا بأول.</p>
+      <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">الرئيسية</a> / <span data-i18n="nav.newsroom">الأخبار</span></div>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <div class="section-head reveal" style="text-align:center;max-width:680px;margin:0 auto 40px;">
-        <p class="section-desc" data-i18n="ds.intro">للإبلاغ عن أي أثر جانبي مرتبط بأحد منتجاتنا، يُرجى تعبئة النموذج أدناه.</p>
+      <div class="newsroom-controls reveal">
+        <div class="newsroom-search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="newsroom-search" data-i18n-attr="placeholder:newsroom.search.ph" placeholder="ابحث في الأخبار">
+        </div>
+        <select id="newsroom-sort">
+          <option value="newest" data-i18n="newsroom.sort.newest">الأحدث أولًا</option>
+          <option value="oldest" data-i18n="newsroom.sort.oldest">الأقدم أولًا</option>
+          <option value="az" data-i18n="newsroom.sort.az">أ - ي</option>
+        </select>
       </div>
 
-      <div class="contact-grid" style="grid-template-columns:1fr;max-width:760px;margin:0 auto;">
-        <div class="form-card reveal">
-          <div class="form-success" id="drug-safety-success" data-i18n="ds.form.success">تم إعداد بلاغكم بنجاح، سيتم فتح برنامج البريد لإتمام الإرسال.</div>
-          <form id="drug-safety-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="ds-name" data-i18n="ds.form.name">اسم معدّ التقرير *</label>
-                <input type="text" id="ds-name" name="ds-name" placeholder="اسم معدّ التقرير" data-i18n-attr="placeholder:ds.form.name.ph">
-                <span class="form-error" data-i18n="ds.form.name.err">يرجى إدخال اسم صحيح (حرفان على الأقل)</span>
-              </div>
-              <div class="form-group">
-                <label for="ds-email" data-i18n="ds.form.email">البريد الإلكتروني *</label>
-                <input type="email" id="ds-email" name="ds-email" placeholder="example@email.com" data-i18n-attr="placeholder:ds.form.email.ph">
-                <span class="form-error" data-i18n="ds.form.email.err">يرجى إدخال بريد إلكتروني صحيح</span>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="ds-phone" data-i18n="ds.form.phone">رقم الجوال</label>
-                <input type="tel" id="ds-phone" name="ds-phone" placeholder="05XXXXXXXX">
-              </div>
-              <div class="form-group">
-                <label for="ds-drug" data-i18n="ds.form.drug">اسم الدواء *</label>
-                <input type="text" id="ds-drug" name="ds-drug" placeholder="اسم الدواء" data-i18n-attr="placeholder:ds.form.drug.ph">
-                <span class="form-error" data-i18n="ds.form.drug.err">يرجى إدخال اسم الدواء</span>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="ds-profession" data-i18n="ds.form.profession">المهنة</label>
-              <input type="text" id="ds-profession" name="ds-profession" placeholder="المهنة" data-i18n-attr="placeholder:ds.form.profession.ph">
-            </div>
-            <div class="form-group">
-              <label for="ds-description" data-i18n="ds.form.description">وصف الأثر الجانبي *</label>
-              <textarea id="ds-description" name="ds-description" placeholder="وصف الأثر الجانبي" data-i18n-attr="placeholder:ds.form.description.ph"></textarea>
-              <span class="form-error" data-i18n="ds.form.description.err">يرجى كتابة وصف لا يقل عن 10 أحرف</span>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" data-i18n="ds.form.submit">إرسال</button>
-            <p class="form-note" data-i18n="ds.form.note">* الحقول المطلوبة. سيتم فتح برنامج البريد الإلكتروني الافتراضي لإتمام الإرسال.</p>
-          </form>
-        </div>
-      </div>
+      <div id="newsroom-loading" class="section-desc" style="text-align:center;padding:40px 0;" data-i18n="newsroom.loading">جارٍ تحميل الأخبار...</div>
+      <div id="newsroom-empty" class="section-desc" style="text-align:center;padding:40px 0;display:none;" data-i18n="newsroom.empty">لا توجد أخبار مطابقة حاليًا.</div>
+
+      <div id="newsroom-featured" style="display:none;"></div>
+      <div id="newsroom-grid" class="grid-3" style="margin-top:32px;"></div>
     </div>
   </section>
 
@@ -222,30 +194,19 @@
   "services.regulatory": "Regulatory Affairs & Compliance",
   "services.market": "Market Access & Tendering",
   "services.support": "Scientific & Commercial Support",
-  "page.title": "Drug Safety | Rawabi Medical",
-  "meta.desc": "Report any side effects associated with Rawabi Medical's medical and pharmaceutical products to our Drug Safety unit.",
-  "ds.hero.title": "Welcome to the Side Effects Reporting Page of Rawabi Medical",
-  "ds.hero.desc": "Monitoring the safety of our medical and pharmaceutical products is at the heart of what we do.",
-  "ds.intro": "To report any side effect associated with one of our products, please fill out the form below.",
-  "ds.form.success": "Your report has been prepared successfully — your email client will open to complete sending.",
-  "ds.form.name": "The Name of Report's Author *",
-  "ds.form.name.ph": "The name of report's author",
-  "ds.form.name.err": "Please enter a valid name (at least 2 characters)",
-  "ds.form.email": "Email *",
-  "ds.form.email.ph": "Enter your email",
-  "ds.form.email.err": "Please enter a valid email address",
-  "ds.form.phone": "Mobile Phone",
-  "ds.form.drug": "Drug Name *",
-  "ds.form.drug.ph": "Drug name",
-  "ds.form.drug.err": "Please enter the drug name",
-  "ds.form.profession": "Profession",
-  "ds.form.profession.ph": "Profession",
-  "ds.form.description": "Description of the Side Effect *",
-  "ds.form.description.ph": "Description of the side effect",
-  "ds.form.description.err": "Please write a description of at least 10 characters",
-  "ds.form.submit": "Send",
-  "ds.form.note": "* Required fields. Your default email client will open to complete sending."
+  "page.title": "Newsroom | Rawabi Medical",
+  "meta.desc": "Latest Rawabi Medical news and updates: partnerships, initiatives, and company developments.",
+  "newsroom.hero.title": "Latest Rawabi Medical News",
+  "newsroom.hero.desc": "Partnerships, initiatives, and company developments, first-hand.",
+  "newsroom.search.ph": "Search news",
+  "newsroom.sort.newest": "Newest First",
+  "newsroom.sort.oldest": "Oldest First",
+  "newsroom.sort.az": "A - Z",
+  "newsroom.loading": "Loading news...",
+  "newsroom.empty": "No matching news right now.",
+  "newsroom.readmore": "Read More →"
 };</script>
 <script src="script.js"></script>
+<script src="newsroom.js"></script>
 </body>
 </html>
