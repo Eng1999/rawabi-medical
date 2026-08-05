@@ -589,6 +589,27 @@ section { padding: 96px 0; }
 .split-media:hover { transform: scale(1.03); box-shadow: var(--shadow-md); }
 .split-media svg { width: 55%; color: var(--color-primary); opacity: 0.9; }
 
+.purpose-media svg { width: 92%; height: auto; opacity: 1; }
+.pm-ring-1, .pm-ring-2 { transform-origin: 200px 160px; }
+.pm-ring-1 { animation: ring-spin 24s linear infinite; }
+.pm-ring-2 { animation: ring-spin 17s linear infinite reverse; }
+.pm-node { animation: pm-pulse 2.4s ease-in-out infinite; transform-origin: center; }
+.pm-nodes circle:nth-child(2) { animation-delay: 0.4s; }
+.pm-nodes circle:nth-child(3) { animation-delay: 0.8s; }
+.pm-nodes circle:nth-child(4) { animation-delay: 1.2s; }
+.pm-nodes circle:nth-child(5) { animation-delay: 1.6s; }
+@keyframes pm-pulse {
+  0%, 100% { r: 4; opacity: 1; }
+  50% { r: 6.5; opacity: 0.55; }
+}
+.pm-float { animation: pm-float 4s ease-in-out infinite; transform-origin: center; }
+.pm-box { animation-delay: 0.5s; }
+.pm-truck { animation-delay: 1s; }
+@keyframes pm-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
 /* ---------- Circular media (decorative photo crop) ---------- */
 .circle-media-wrap {
   position: relative;

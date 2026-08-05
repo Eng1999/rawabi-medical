@@ -122,7 +122,63 @@
           <p class="section-desc" data-i18n="about.purpose.desc1">سدّ الفجوة بين احتياجات المرضى غير الملباة والحلول المتخصصة، بمنتجات موثوقة تصل في الوقت المناسب.</p>
           <p class="section-desc" style="margin-top:14px;" data-i18n="about.purpose.desc2">الوصول للعلاج مسؤولية، لا مجرد توريد — تتطلب معرفة تنظيمية وشراكات عالمية وفهمًا عميقًا للسوق السعودي.</p>
         </div>
-        <div class="split-media reveal" style="background-image:url('assets/img/purpose-target.jpg');background-size:cover;background-position:center;"></div>
+        <div class="split-media purpose-media reveal">
+          <svg viewBox="0 0 400 360" aria-hidden="true">
+            <defs>
+              <linearGradient id="pmGrad1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="var(--color-primary)"/>
+                <stop offset="100%" stop-color="var(--color-primary-light)"/>
+              </linearGradient>
+              <linearGradient id="pmGrad2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="var(--color-primary-light)"/>
+                <stop offset="100%" stop-color="var(--color-accent)"/>
+              </linearGradient>
+            </defs>
+
+            <circle class="pm-ring pm-ring-1" cx="200" cy="160" r="130" fill="none" stroke="url(#pmGrad1)" stroke-width="1.4" stroke-dasharray="4 7" opacity="0.55"/>
+            <circle class="pm-ring pm-ring-2" cx="200" cy="160" r="95" fill="none" stroke="url(#pmGrad2)" stroke-width="1.2" stroke-dasharray="2 6" opacity="0.45"/>
+            <circle cx="200" cy="160" r="58" fill="none" stroke="var(--color-border)" stroke-width="1"/>
+
+            <g class="pm-links" stroke="url(#pmGrad1)" stroke-width="1.4" opacity="0.6">
+              <line x1="200" y1="160" x2="108" y2="95"/>
+              <line x1="200" y1="160" x2="292" y2="95"/>
+              <line x1="200" y1="160" x2="120" y2="235"/>
+              <line x1="200" y1="160" x2="280" y2="235"/>
+              <line x1="200" y1="160" x2="200" y2="55"/>
+            </g>
+            <g class="pm-nodes" fill="url(#pmGrad2)">
+              <circle class="pm-node" cx="108" cy="95" r="4"/>
+              <circle class="pm-node" cx="292" cy="95" r="4"/>
+              <circle class="pm-node" cx="120" cy="235" r="4"/>
+              <circle class="pm-node" cx="280" cy="235" r="4"/>
+              <circle class="pm-node" cx="200" cy="55" r="4"/>
+            </g>
+
+            <g transform="translate(200,160)">
+              <g class="pm-float pm-shield">
+                <circle r="34" fill="#fff" stroke="var(--color-border)" stroke-width="1"/>
+                <path d="M0 -16 12 -10 12 3 C12 13 6 20 0 22 C-6 20 -12 13 -12 3 L-12 -10 Z" fill="none" stroke="url(#pmGrad1)" stroke-width="2.4" stroke-linejoin="round"/>
+                <path d="M-6 0 -1.5 5 8 -6" fill="none" stroke="url(#pmGrad1)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </g>
+
+            <g transform="translate(96,225)">
+              <g class="pm-float pm-box">
+                <rect x="-22" y="-16" width="44" height="34" rx="3" fill="#fff" stroke="var(--color-border)" stroke-width="1.4"/>
+                <path d="M-22 -6 22 -6 M0 -16 0 18" stroke="url(#pmGrad2)" stroke-width="1.6"/>
+              </g>
+            </g>
+
+            <g transform="translate(298,222)">
+              <g class="pm-float pm-truck">
+                <rect x="-30" y="-13" width="34" height="20" rx="2" fill="#fff" stroke="var(--color-border)" stroke-width="1.4"/>
+                <path d="M4 -6 H18 L26 2 V7 H4 Z" fill="#fff" stroke="var(--color-border)" stroke-width="1.4"/>
+                <circle cx="-18" cy="10" r="5" fill="#fff" stroke="url(#pmGrad1)" stroke-width="1.6"/>
+                <circle cx="14" cy="10" r="5" fill="#fff" stroke="url(#pmGrad1)" stroke-width="1.6"/>
+              </g>
+            </g>
+          </svg>
+        </div>
       </div>
     </div>
   </section>
