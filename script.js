@@ -87,6 +87,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  var counterEls = document.querySelectorAll(".counter[data-counter-target]");
+  if ("IntersectionObserver" in window && counterEls.length) {
+    var counterObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          counterObserver.unobserve(entry.target);
+          var el = entry.target;
+          var target = parseFloat(el.getAttribute("data-counter-target")) || 0;
+          var suffix = el.getAttribute("data-counter-suffix") || "";
+          var duration = 1600;
+          var start = null;
+          function step(ts) {
+            if (start === null) start = ts;
+            var progress = Math.min((ts - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        });
+      },
+      { threshold: 0.4 }
+    );
+    counterEls.forEach(function (el) { counterObserver.observe(el); });
+  } else {
+    counterEls.forEach(function (el) {
+      el.textContent = (el.getAttribute("data-counter-target") || "0") + (el.getAttribute("data-counter-suffix") || "");
+    });
+  }
+
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
     var observer = new IntersectionObserver(
