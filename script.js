@@ -105,9 +105,10 @@ document.addEventListener("DOMContentLoaded", function () {
     revealEls.forEach(function (el) { el.classList.add("visible"); });
   }
 
-  var form = document.getElementById("contact-form");
-  if (form) {
-    var successBox = document.getElementById("form-success");
+  function wireForm(formId, config) {
+    var form = document.getElementById(formId);
+    if (!form) return;
+    var successBox = document.getElementById(config.successId);
 
     function setError(group, hasError) {
       group.classList.toggle("invalid", hasError);
@@ -115,32 +116,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function validate() {
       var valid = true;
-      var name = form.querySelector("#name");
-      var email = form.querySelector("#email");
-      var phone = form.querySelector("#phone");
-      var message = form.querySelector("#message");
-
-      var nameGroup = name.closest(".form-group");
-      var emailGroup = email.closest(".form-group");
-      var phoneGroup = phone.closest(".form-group");
-      var messageGroup = message.closest(".form-group");
-
-      var nameOk = name.value.trim().length >= 2;
-      setError(nameGroup, !nameOk);
-      if (!nameOk) valid = false;
-
-      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-      setError(emailGroup, !emailOk);
-      if (!emailOk) valid = false;
-
-      var phoneOk = phone.value.trim().length >= 8;
-      setError(phoneGroup, !phoneOk);
-      if (!phoneOk) valid = false;
-
-      var messageOk = message.value.trim().length >= 10;
-      setError(messageGroup, !messageOk);
-      if (!messageOk) valid = false;
-
+      config.requiredFields.forEach(function (f) {
+        var el = form.querySelector("#" + f.id);
+        var group = el.closest(".form-group");
+        var ok = f.test(el.value.trim());
+        setError(group, !ok);
+        if (!ok) valid = false;
+      });
       return valid;
     }
 
@@ -148,20 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       if (!validate()) return;
 
-      var name = form.querySelector("#name").value.trim();
-      var email = form.querySelector("#email").value.trim();
-      var phone = form.querySelector("#phone").value.trim();
-      var subject = form.querySelector("#subject").value.trim() || "طلب تواصل من الموقع";
-      var message = form.querySelector("#message").value.trim();
-
-      var body =
-        "الاسم: " + name + "\n" +
-        "البريد الإلكتروني: " + email + "\n" +
-        "رقم الهاتف: " + phone + "\n\n" +
-        message;
-
+      var subject = config.buildSubject(form);
+      var body = config.buildBody(form);
       var mailto =
-        "mailto:info@rwabimed.com" +
+        "mailto:" + config.email +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
 
@@ -176,4 +148,48 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  var emailTest = function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); };
+
+  wireForm("contact-form", {
+    successId: "form-success",
+    email: "info@rwabimed.com",
+    requiredFields: [
+      { id: "name", test: function (v) { return v.length >= 2; } },
+      { id: "email", test: emailTest },
+      { id: "phone", test: function (v) { return v.length >= 8; } },
+      { id: "message", test: function (v) { return v.length >= 10; } }
+    ],
+    buildSubject: function (form) {
+      return form.querySelector("#subject").value.trim() || "طلب تواصل من الموقع";
+    },
+    buildBody: function (form) {
+      return "الاسم: " + form.querySelector("#name").value.trim() + "\n" +
+        "البريد الإلكتروني: " + form.querySelector("#email").value.trim() + "\n" +
+        "رقم الهاتف: " + form.querySelector("#phone").value.trim() + "\n\n" +
+        form.querySelector("#message").value.trim();
+    }
+  });
+
+  wireForm("drug-safety-form", {
+    successId: "drug-safety-success",
+    email: "qppv@rwabimed.com",
+    requiredFields: [
+      { id: "ds-name", test: function (v) { return v.length >= 2; } },
+      { id: "ds-email", test: emailTest },
+      { id: "ds-drug", test: function (v) { return v.length >= 1; } },
+      { id: "ds-description", test: function (v) { return v.length >= 10; } }
+    ],
+    buildSubject: function () {
+      return "بلاغ عن أثر جانبي - روابي الطبية";
+    },
+    buildBody: function (form) {
+      return "اسم معدّ التقرير: " + form.querySelector("#ds-name").value.trim() + "\n" +
+        "البريد الإلكتروني: " + form.querySelector("#ds-email").value.trim() + "\n" +
+        "رقم الجوال: " + form.querySelector("#ds-phone").value.trim() + "\n" +
+        "اسم الدواء: " + form.querySelector("#ds-drug").value.trim() + "\n" +
+        "المهنة: " + form.querySelector("#ds-profession").value.trim() + "\n\n" +
+        "وصف الأثر الجانبي:\n" + form.querySelector("#ds-description").value.trim();
+    }
+  });
 });
