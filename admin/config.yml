@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: eng1999/rawabi-medical
+  branch: main
+
+publish_mode: simple
+media_folder: "assets/news"
+public_folder: "/assets/news"
+
+collections:
+  - name: "news"
+    label: "الأخبار"
+    folder: "content/news"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    fields:
+      - { label: "العنوان (عربي)", name: "title", widget: "string" }
+      - { label: "Title (English)", name: "title_en", widget: "string" }
+      - { label: "التاريخ", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "الصورة", name: "image", widget: "image" }
+      - { label: "المقتطف (عربي)", name: "excerpt", widget: "text" }
+      - { label: "Excerpt (English)", name: "excerpt_en", widget: "text" }
+      - { label: "المحتوى (عربي)", name: "body", widget: "markdown" }
