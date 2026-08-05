@@ -223,13 +223,14 @@ section { padding: 96px 0; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: var(--color-navy);
+  white-space: nowrap;
 }
 .brand-mark {
-  width: 42px; height: 42px;
+  width: 60px; height: 60px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
@@ -237,7 +238,7 @@ section { padding: 96px 0; }
 .brand small {
   display: block;
   font-family: "Cinzel", serif;
-  font-size: 0.68rem;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--color-text-muted);
