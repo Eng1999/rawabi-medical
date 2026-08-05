@@ -577,13 +577,16 @@ section { padding: 96px 0; }
 .split-media {
   border-radius: var(--radius-lg);
   background: linear-gradient(160deg, var(--color-bg-alt), #fff);
+  background-size: cover;
   border: 1px solid var(--color-border);
   min-height: 380px;
   display: flex; align-items: center; justify-content: center;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  transition: transform 0.5s var(--ease-spring), box-shadow var(--transition);
 }
+.split-media:hover { transform: scale(1.03); box-shadow: var(--shadow-md); }
 .split-media svg { width: 55%; color: var(--color-primary); opacity: 0.9; }
 
 /* ---------- Circular media (decorative photo crop) ---------- */
@@ -614,7 +617,9 @@ section { padding: 96px 0; }
   background-position: center;
   border: 6px solid var(--color-bg);
   box-shadow: var(--shadow-lg);
+  transition: transform 0.5s var(--ease-spring);
 }
+.circle-media-wrap:hover .circle-media { transform: scale(1.05); }
 
 /* ---------- Hexagon media (platform value section) ---------- */
 .hex-media-wrap {
