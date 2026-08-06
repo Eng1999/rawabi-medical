@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: eng1999/rawabi-medical
+  name: git-gateway
   branch: main
 
 publish_mode: simple
