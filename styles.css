@@ -218,19 +218,19 @@ section { padding: 96px 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 24px;
+  padding: 14px 24px;
 }
 .brand {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   font-weight: 800;
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   color: var(--color-navy);
   white-space: nowrap;
 }
 .brand-mark {
-  width: 180px; height: 180px;
+  width: 60px; height: 60px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
@@ -238,30 +238,30 @@ section { padding: 96px 0; }
 .brand small {
   display: block;
   font-family: "Cinzel", serif;
-  font-size: 1.15rem;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--color-text-muted);
 }
 @media (max-width: 760px) {
-  .brand-mark { width: 50px; height: 50px; }
-  .brand { font-size: 1rem; gap: 8px; }
-  .brand small { font-size: 0.62rem; }
+  .brand-mark { width: 46px; height: 46px; }
+  .brand { font-size: 1rem; gap: 10px; }
+  .brand small { font-size: 0.66rem; }
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
 .nav-links a {
   position: relative;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 999px;
   font-weight: 600;
   color: var(--color-text);
   transition: background var(--transition), color var(--transition);
-  font-size: 0.9rem;
+  font-size: 0.93rem;
   white-space: nowrap;
 }
 .nav-links a::after {
