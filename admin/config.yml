@@ -50,4 +50,4 @@ collections:
       - { label: "الصورة", name: "image", widget: "image" }
       - { label: "المقتطف (عربي)", name: "excerpt", widget: "text" }
       - { label: "Excerpt (English)", name: "excerpt_en", widget: "text" }
-      - { label: "المحتوى (عربي)", name: "body", widget: "markdown" }
+      - { label: "المحتوى (عربي ثم الإنجليزي)", name: "body", widget: "markdown", hint: "اكتب المحتوى بالعربية أولاً، ثم أضف سطرًا مستقلًا نصّه <!--EN--> فقط، ثم أضف الترجمة الإنجليزية الكاملة بعده. إن لم تُضف قسم <!--EN-->، يُعرض المحتوى العربي في وضع اللغة الإنجليزية أيضًا." }
