@@ -928,7 +928,7 @@ section { padding: 96px 0; }
   border-radius: var(--radius-sm);
   border: 1.5px solid var(--color-border);
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 1rem;
   background: var(--color-bg-soft);
   transition: border-color var(--transition), background var(--transition);
 }
@@ -1202,7 +1202,7 @@ body.lang-en { font-family: var(--font-latin); }
 .newsroom-search:focus-within { border-color: var(--color-primary); background: #fff; }
 .newsroom-search input {
   border: none; background: transparent; outline: none;
-  font-family: inherit; font-size: 0.95rem; color: var(--color-text); width: 100%;
+  font-family: inherit; font-size: 1rem; color: var(--color-text); width: 100%;
 }
 #newsroom-sort {
   padding: 13px 16px;
@@ -1210,7 +1210,7 @@ body.lang-en { font-family: var(--font-latin); }
   border: 1.5px solid var(--color-border);
   background: var(--color-bg-soft);
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--color-text);
   min-width: 180px;
 }
